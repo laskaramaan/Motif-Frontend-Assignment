@@ -11,7 +11,7 @@ const App = () => {
   const [dataSource, setDataSource] = useState([]);
   const [filterChip, setFilterChip] = useState("all");
   const [currentPage, setCurrentPage] = useState(1);
-  const [postsPerPage, setPostsPerPage] = useState(10);
+  const [postsPerPage, setPostsPerPage] = useState(50);
   // const currentPosts = listData.slice((currentPage-1)*postsPerPage,currentPage*postsPerPage);
   useEffect(() => {
     fetchList();
