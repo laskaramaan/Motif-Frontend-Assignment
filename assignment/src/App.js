@@ -155,12 +155,19 @@ const App = () => {
       </div>
       <div style={{ display: "flex", gap: "20px" }}>
         {/* email list */}
-
-        <List
-          listData={currentPosts}
-          handleOpenEmail={handleOpenEmail}
-          date={getDate()}
-        />
+        {filterChip === "all" ? (
+          <List
+            listData={currentPosts}
+            handleOpenEmail={handleOpenEmail}
+            date={getDate()}
+          />
+        ) : (
+          <List
+            listData={listData}
+            handleOpenEmail={handleOpenEmail}
+            date={getDate()}
+          />
+        )}
 
         {isEmailOpen && (
           // email body
@@ -170,10 +177,11 @@ const App = () => {
             date={getDate()}
           />
         )}
-      
       </div>
-      <div style={{display:"flex",justifyContent:"center",marginTop:"15px"}}>
-      <Pagination
+      <div
+        style={{ display: "flex", justifyContent: "center", marginTop: "15px" }}
+      >
+        <Pagination
           postsPerPage={postsPerPage}
           totalPosts={listData.length}
           setCurrentPage={setCurrentPage}
