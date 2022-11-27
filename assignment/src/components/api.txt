@@ -1,1 +1,2 @@
 https://6366339879b0914b75cba9c2.mockapi.io/api/email
+https://6366339879b0914b75cba9c2.mockapi.io/api/email/5
